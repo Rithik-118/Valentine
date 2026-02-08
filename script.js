@@ -1,10 +1,3 @@
-document.addEventListener("click", function () {
-  const music = document.getElementById("bgMusic");
-  if (music) {
-    music.muted = false;
-    music.play().catch(() => {});
-  }
-}, { once: true });
 const messages = [
   "No aa…? 🥺",
   "Koncham aagi alochinchu ❤️",
@@ -21,6 +14,11 @@ const messages = [
 let messageIndex = 0;
 
 function handleNoClick() {
+  const music = document.getElementById("bgMusic");
+  if (music.paused) {
+    music.play();
+  }
+  
   const noButton = document.querySelector(".no-button");
   const yesButton = document.querySelector(".yes-button");
 
@@ -41,5 +39,10 @@ function handleNoClick() {
 }
 
 function handleYesClick() {
+  const music = document.getElementById("bgMusic");
+  if (music.paused) {
+    music.play();
+  }
+  
   window.location.href = "yes_page.html";
 }
