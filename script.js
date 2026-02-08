@@ -1,5 +1,9 @@
-document.addEventListener("click", () => {
-  document.getElementById("bgMusic").play();
+document.addEventListener("click", function () {
+  const music = document.getElementById("bgMusic");
+  if (music) {
+    music.muted = false;
+    music.play().catch(() => {});
+  }
 }, { once: true });
 const messages = [
   "No aa…? 🥺",
