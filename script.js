@@ -35,3 +35,6 @@ function handleNoClick() {
   const y = Math.random() * 120 - 60;
   noButton.style.transform = `translate(${x}px, ${y}px)`;
 }
+const x = Math.random() * 120 - 60;
+const y = Math.random() * 120 - 60;
+noButton.style.transform = `translate(${x}px, ${y}px)`;
